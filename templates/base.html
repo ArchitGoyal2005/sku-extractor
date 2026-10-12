@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}SKU PDF Extractor{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"></head>
+<body><header class="site-header"><a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">SKU</span> PDF Extractor</a><span class="header-note">Server-rendered · in-memory processing</span></header>
+<main class="container">{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<div class="flash-stack">{% for category,message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}{% endwith %}{% block content %}{% endblock %}</main>
+<footer>Uploads and reports are processed in memory and expire automatically.</footer></body></html>
